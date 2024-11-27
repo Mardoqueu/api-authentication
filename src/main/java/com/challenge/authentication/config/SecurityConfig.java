@@ -41,20 +41,17 @@ public class SecurityConfig {
         http
                 .cors(cors -> cors.configurationSource(request -> {
                     var corsConfig = new org.springframework.web.cors.CorsConfiguration();
-                    corsConfig.setAllowedOrigins(List.of("https://calculator-front-chi.vercel.app", "http://localhost:3000"));
+                    corsConfig.setAllowedOrigins(List.of("https://calculator-front-chi.vercel.app"));
                     corsConfig.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
                     corsConfig.setAllowedHeaders(List.of("*"));
-                    corsConfig.setAllowedOrigins(List.of("*"));
                     return corsConfig;
                 }))
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/api/auth/register", "/api/auth/login").permitAll()
                         .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
-                        .requestMatchers("/", "/favicon.ico", "/error").permitAll()
                         .anyRequest().authenticated()
                 );
-
 
         http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
 
