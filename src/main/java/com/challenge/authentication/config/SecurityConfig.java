@@ -44,6 +44,7 @@ public class SecurityConfig {
                     corsConfig.setAllowedOrigins(List.of("https://calculator-front-chi.vercel.app", "http://localhost:3000"));
                     corsConfig.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
                     corsConfig.setAllowedHeaders(List.of("*"));
+                    corsConfig.setAllowedOrigins(List.of("*"));
                     return corsConfig;
                 }))
                 .csrf(csrf -> csrf.disable())
