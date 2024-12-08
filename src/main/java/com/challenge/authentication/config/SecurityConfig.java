@@ -15,6 +15,14 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 import java.util.List;
 
+/**
+ * Security configuration class for setting up HTTP security and authentication management.
+ *
+ * This class configures web security to handle authentication and authorization of HTTP requests.
+ * It integrates JWT-based authentication with Spring Security and custom user details service.
+ *
+ * An instance of this class is registered as a configuration bean within the application context.
+ */
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {

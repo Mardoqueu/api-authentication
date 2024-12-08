@@ -3,6 +3,12 @@ package com.challenge.authentication.dto;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
+/**
+ * The UserDTO class is a Data Transfer Object used to encapsulate user information.
+ * It includes fields for the username and password, with validation constraints applied
+ * to ensure that the username is between 3 and 30 characters long and is not blank,
+ * and the password is not blank and is less than 10 characters long.
+ */
 public class UserDTO {
 
     @NotBlank(message = "Username cannot be blank")

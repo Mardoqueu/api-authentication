@@ -9,6 +9,10 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * A global exception handler using Spring's {@link RestControllerAdvice} to handle and process specific exceptions
+ * across the whole application in a consistent manner.
+ */
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 

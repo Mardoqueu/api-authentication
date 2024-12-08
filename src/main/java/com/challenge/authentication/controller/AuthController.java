@@ -15,6 +15,16 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * The AuthController class is a REST controller that handles authentication-related
+ * HTTP requests such as user registration and user login.
+ *
+ * It provides endpoints to register a new user and to authenticate an existing user.
+ * Upon successful authentication, it returns a JWT token.
+ *
+ * This class uses the UserService for user management, JwtUtil for JWT operations,
+ * and AuthenticationManager for authentication processing.
+ */
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {

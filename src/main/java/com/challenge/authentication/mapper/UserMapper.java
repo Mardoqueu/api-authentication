@@ -3,6 +3,10 @@ package com.challenge.authentication.mapper;
 import com.challenge.authentication.dto.UserDTO;
 import com.challenge.authentication.entity.User;
 
+/**
+ * The UserMapper class is responsible for converting between User and UserDTO objects.
+ * It provides two static methods to facilitate this mapping.
+ */
 public class UserMapper {
 
     public static User toEntity(UserDTO userDTO) {
